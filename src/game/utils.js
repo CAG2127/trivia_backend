@@ -19,6 +19,8 @@ function insertQuestionIntoDataBase(question){
     Question.create({
         question: question.question,
         answer: question.correctAnswer
+    }).catch(error=>{
+        console.log(error)
     })
 }
 async function verifyAnswer(question,answer){

@@ -17,7 +17,7 @@ const verifyToken = (req, res, next) => {
         }
         return next()
     } catch (error) {
-        return res.status(401).send({ data: { error: error.toString() }, status: false, menssage: "ERROR DE AUTENTICACIÓN" })
+        return res.status(200).send({ data: { error: error.toString() }, status: false, menssage: "ERROR DE AUTENTICACIÓN" })
     }
 
 
